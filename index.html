@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PETROLCHEM | The Future of Energy</title>
+    <meta name="description" content="Petrolchem - Leading the energy industry through innovation, technology, and superior service.">
+    
+    <!-- Favicon: Simple Red Square for Petrolchem branding -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23BE1E2D'/%3E%3C/svg%3E">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Match Hero Background to avoid flash */
         }
-        .halliburton-red { color: #BE1E2D; }
-        .bg-halliburton-red { background-color: #BE1E2D; }
-        .border-halliburton-red { border-color: #BE1E2D; }
         
         /* Smooth scrolling */
         html {
@@ -39,14 +45,25 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #BE1E2D;
         }
+
+        /* Prevent potential blank screen by ensuring root has height */
+        #root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
     </style>
+    
+    <!-- Explicitly including the entry point script for environments that may not auto-import it -->
+    <script type="module" src="./index.tsx"></script>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.454.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
   }
 }
 </script>
