@@ -2,6 +2,8 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Features from './components/Features';
+import InnovationSection from './components/InnovationSection';
 import GridSection from './components/GridSection';
 import NewsSection from './components/NewsSection';
 import CareerSection from './components/CareerSection';
@@ -49,6 +51,8 @@ const App: React.FC = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <InnovationSection />
+        <Features />
         <GridSection title="Explore our latest innovations" items={innovationsData} />
         <NewsSection />
         <GridSection title="Explore how we maximize asset value" items={assetValueData} />
