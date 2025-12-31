@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Search, Menu, X, ExternalLink } from 'lucide-react';
 
 const utilityLinks = [
@@ -15,20 +15,11 @@ const mainNav = [
 ];
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      {/* Utility Nav */}
+      {/* Utility Nav - Hidden on Mobile */}
       <div className="hidden lg:flex justify-end items-center px-16 py-1 bg-white text-[10px] font-normal text-gray-600">
         <div className="flex gap-5 items-center">
           {utilityLinks.map((link) => (
@@ -40,53 +31,53 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Nav */}
-      <nav className={`bg-white border-b border-gray-100 transition-all duration-300 flex justify-between items-stretch`}>
-        {/* Brand */}
-        <div className="flex items-center pl-16 py-4">
-          <div className="text-[28px] font-black text-[#BE1E2D] tracking-[-0.05em] leading-none">
+      <nav className="bg-white border-b border-gray-100 flex items-stretch h-[60px] md:h-auto">
+        {/* Mobile Hamburger - Left */}
+        <div className="flex lg:hidden items-center px-4">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Brand - Centered on mobile, Left on Desktop */}
+        <div className="flex-grow lg:flex-grow-0 flex items-center justify-center lg:justify-start lg:pl-16 py-2 lg:py-4">
+          <div className="text-[20px] md:text-[28px] font-black text-[#BE1E2D] tracking-[-0.05em] leading-none uppercase">
             PETROLCHEM
           </div>
         </div>
 
-        {/* Desktop Links & Search */}
-        <div className="hidden lg:flex items-center">
-          <div className="flex gap-8 px-8 h-full items-center">
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center flex-grow justify-center">
+          <div className="flex gap-6 px-4">
             {mainNav.map((item) => (
               <a 
                 key={item} 
                 href="#" 
-                className="text-[12px] font-medium tracking-normal text-gray-800 hover:text-[#BE1E2D] transition-colors"
+                className="text-[11px] font-bold tracking-tight text-gray-800 hover:text-[#BE1E2D] transition-colors whitespace-nowrap"
               >
-                {item}
+                {item.toUpperCase()}
               </a>
             ))}
           </div>
-          
-          {/* Distinct Search Block */}
-          <button className="bg-[#BE1E2D] w-[60px] h-[60px] flex items-center justify-center text-white hover:bg-red-800 transition-colors">
-            <Search size={24} strokeWidth={2.5} />
-          </button>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center pr-6">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+        {/* Search Block - Right (Red Square on mobile) */}
+        <button className="bg-[#BE1E2D] w-[60px] h-full flex items-center justify-center text-white hover:bg-red-800 transition-colors">
+          <Search size={22} strokeWidth={2.5} />
+        </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] bg-white z-40 lg:hidden flex flex-col p-6 overflow-y-auto animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="fixed inset-0 top-[60px] bg-white z-40 lg:hidden flex flex-col p-6 overflow-y-auto">
           {mainNav.map((item) => (
-            <a key={item} href="#" className="py-4 text-xl font-bold border-b border-gray-50" onClick={() => setMobileMenuOpen(false)}>
+            <a key={item} href="#" className="py-4 text-lg font-bold border-b border-gray-50 text-gray-800 uppercase tracking-tight" onClick={() => setMobileMenuOpen(false)}>
               {item}
             </a>
           ))}
           <div className="mt-8 flex flex-col gap-4">
             {utilityLinks.map(link => (
-              <a key={link.label} href={link.href} className="text-sm text-gray-500">{link.label}</a>
+              <a key={link.label} href={link.href} className="text-sm font-medium text-gray-500 hover:text-[#BE1E2D]">{link.label}</a>
             ))}
           </div>
         </div>
