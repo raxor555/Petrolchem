@@ -18,12 +18,12 @@ const innovationsData = [
   {
     title: "5 reasons why umbilical-less intervention represents the future of smarter offshore operations",
     desc: "Subsea control systems have evolved from the complex umbilicals of over 5 decades ago. Today's offshore operations demand more agility, safety, and efficiency",
-    image: "https://images.unsplash.com/photo-1517524008436-bbdb03ac833b?q=80&w=800&auto=format&fit=crop"
+    image: "https://read.nxtbook.com/gulf_energy_information/world_oil/january_2025/assets/389ceb46af24a03bbe88763fca816eec.jpg"
   },
   {
     title: "Petrolchem introduces StreamStar™ wired drill pipe interface system",
     desc: "StreamStar delivers continuous surface power and improves orchestrated closed-loop automation for superior well delivery",
-    image: "https://images.unsplash.com/photo-1504384308090-c89e12076d22?q=80&w=800&auto=format&fit=crop"
+    image: "https://cdn.induportals-media-publishing.org/Press%20Files/10/26/34/102634-halliburton111.jpg"
   }
 ];
 
@@ -36,7 +36,7 @@ const assetValueData = [
   {
     title: "Cement provides isolation for CCUS well in Adriatic Sea",
     desc: "Tailored CorrosaCem™ cement system provides a corrosion-resistant barrier and complete casing isolation for a CO2 injection well in the Adriatic Sea",
-    image: "https://images.unsplash.com/photo-1542332213-9b5a5a3fab35?q=80&w=800&auto=format&fit=crop"
+    image: "https://cleantechnica.com/wp-content/uploads/2024/06/DALL%C2%B7E-2024-06-16-11.20.40-A-panoramic-view-of-a-cement-plant-with-smokestacks-silos-and-large-machinery.-Above-the-plant-a-giant-vacuum-cleaner-labeled-CCS-Carbon-Capture-copy-800x445.png"
   },
   {
     title: "Expandable liner system suits deepwater installations",

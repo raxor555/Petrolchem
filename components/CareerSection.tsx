@@ -26,7 +26,7 @@ const CareerSection: React.FC = () => {
 
         {/* Right Side: Video Feature */}
         <div className="lg:col-span-2 relative min-h-[500px] bg-cover bg-center flex items-end p-12 lg:p-20"
-             style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1574689232145-8f6cf9c02058?q=80&w=1200&auto=format&fit=crop")' }}>
+             style={{ backgroundImage: 'url("https://img.freepik.com/free-photo/civil-engineer-construction-worker-manager-holding-digital-tablet-blueprints-talking-planing-about-construction-site-cooperation-teamwork-concept_640221-156.jpg?semt=ais_hybrid&w=740&q=80")' }}>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
           <div className="relative z-10">
             <div className="relative pl-4 mb-6">
