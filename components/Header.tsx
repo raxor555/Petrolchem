@@ -17,15 +17,23 @@ const utilityLinks = [
 
 const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cmwOpen, setCmwOpen] = useState(false);
+  const [prodOpen, setProdOpen] = useState(false);
+
+  const scrollToContact = () => {
+    onNavigate('home');
+    setTimeout(() => {
+      document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       {/* Utility Nav */}
-      <div className="hidden lg:flex justify-end items-center px-16 py-1.5 bg-white text-[10px] font-semibold text-gray-400 border-b border-purple-50">
+      <div className="hidden lg:flex justify-end items-center px-16 py-1.5 bg-white text-[10px] font-semibold text-gray-400 border-b border-orange-50">
         <div className="flex gap-8 items-center">
           {utilityLinks.map((link) => (
-            <a key={link.label} href={link.href} className="hover:text-[#4B1771] flex items-center gap-1 transition-all uppercase tracking-widest">
+            <a key={link.label} href={link.href} className="hover:text-[#E83E00] flex items-center gap-1 transition-all uppercase tracking-widest">
               {link.label} {link.icon}
             </a>
           ))}
@@ -33,17 +41,17 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
       </div>
 
       {/* Main Nav */}
-      <nav className="bg-white border-b-2 border-purple-100 flex items-stretch h-[70px] md:h-[85px]">
+      <nav className="bg-white border-b-2 border-orange-100 flex items-stretch h-[70px] md:h-[85px]">
         {/* Mobile Hamburger */}
         <div className="flex lg:hidden items-center px-6">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-[#4B1771] p-2 hover:bg-purple-50 transition-colors rounded-lg">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-[#E83E00] p-2 hover:bg-orange-50 transition-colors rounded-lg">
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Brand Logo Section */}
         <div 
-          className="flex-grow lg:flex-grow-0 flex items-center justify-center lg:justify-start lg:pl-16 py-2 border-r border-purple-50 pr-12 cursor-pointer group"
+          className="flex-grow lg:flex-grow-0 flex items-center justify-center lg:justify-start lg:pl-16 py-2 border-r border-orange-50 pr-12 cursor-pointer group"
           onClick={() => {
             onNavigate('home');
             setMobileMenuOpen(false);
@@ -55,43 +63,51 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center flex-grow justify-center">
           <div className="flex gap-12 xl:gap-16 px-4">
-            {/* Production Menu - No longer a dropdown */}
-            <button 
-              onClick={() => onNavigate('production')}
-              className="text-[14px] font-semibold tracking-[0.2em] text-gray-900 hover:text-[#4B1771] transition-all uppercase py-2"
-            >
-              Production
-            </button>
-            
+            {/* Production Menu with Dropdown */}
             <div 
               className="relative group py-2"
-              onMouseEnter={() => setCmwOpen(true)}
-              onMouseLeave={() => setCmwOpen(false)}
+              onMouseEnter={() => setProdOpen(true)}
+              onMouseLeave={() => setProdOpen(false)}
             >
               <button 
-                onClick={() => onNavigate('cmw')}
-                className="flex items-center gap-2 text-[14px] font-semibold tracking-[0.2em] text-gray-900 hover:text-[#4B1771] transition-all uppercase"
+                onClick={() => onNavigate('production')}
+                className="flex items-center gap-2 text-[14px] font-semibold tracking-[0.2em] text-gray-900 hover:text-[#E83E00] transition-all uppercase"
               >
-                CM&W <ChevronDown size={16} strokeWidth={2} className={`transition-transform duration-300 ${cmwOpen ? 'rotate-180 text-[#4B1771]' : ''}`} />
+                Production <ChevronDown size={16} strokeWidth={2} className={`transition-transform duration-300 ${prodOpen ? 'rotate-180 text-[#E83E00]' : ''}`} />
               </button>
               
-              {cmwOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white shadow-[0_25px_60px_rgba(75,23,113,0.2)] border-t-4 border-[#4B1771] py-4 z-50 animate-in fade-in zoom-in-95 duration-200">
-                  <div className="px-6 py-3 text-[11px] font-bold text-gray-300 uppercase select-none">Segments</div>
+              {prodOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white shadow-[0_25px_60px_rgba(232,62,0,0.2)] border-t-4 border-[#E83E00] py-4 z-50 animate-in fade-in zoom-in-95 duration-200">
+                  {/* Non-clickable labels */}
+                  <div className="px-6 py-4 text-[12px] font-semibold text-gray-300 uppercase cursor-default border-l-4 border-transparent">
+                    Upstream
+                  </div>
+                  <div className="px-6 py-4 text-[12px] font-semibold text-gray-300 uppercase cursor-default border-l-4 border-transparent">
+                    Midstream
+                  </div>
+                  {/* Clickable Downstream link */}
                   <button 
-                    onClick={() => { onNavigate('downstream'); setCmwOpen(false); }}
-                    className="w-full text-left block px-6 py-4 text-[12px] font-semibold text-[#4B1771] hover:bg-purple-50 transition-all uppercase border-l-4 border-transparent hover:border-[#4B1771]"
+                    onClick={() => { onNavigate('downstream'); setProdOpen(false); }}
+                    className="w-full text-left block px-6 py-4 text-[12px] font-semibold text-[#E83E00] hover:bg-orange-50 transition-all uppercase border-l-4 border-transparent hover:border-[#E83E00]"
                   >
                     Downstream
                   </button>
                 </div>
               )}
             </div>
+            
+            {/* CM&W Menu - No dropdown now */}
+            <button 
+              onClick={() => onNavigate('cmw')}
+              className="text-[14px] font-semibold tracking-[0.2em] text-gray-900 hover:text-[#E83E00] transition-all uppercase py-2"
+            >
+              CM&W
+            </button>
           </div>
         </div>
 
         {/* Search Call to Action */}
-        <button className="bg-[#4B1771] w-[70px] md:w-[85px] h-full flex items-center justify-center text-white hover:bg-[#351052] transition-all group relative overflow-hidden">
+        <button className="bg-[#E83E00] w-[70px] md:w-[85px] h-full flex items-center justify-center text-white hover:bg-[#c73500] transition-all group relative overflow-hidden">
           <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           <Search strokeWidth={2} className="relative z-10 group-hover:scale-110 transition-transform w-6 h-6 md:w-7 md:h-7" />
         </button>
@@ -102,28 +118,35 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         <div className="fixed inset-0 top-[70px] bg-white z-40 lg:hidden flex flex-col p-6 md:p-10 overflow-y-auto animate-in slide-in-from-left duration-300">
           <button 
             onClick={() => { onNavigate('production'); setMobileMenuOpen(false); }}
-            className="text-left py-6 text-2xl font-semibold text-[#4B1771] border-b border-purple-50 uppercase tracking-tighter"
+            className="text-left py-6 text-2xl font-semibold text-[#E83E00] border-b border-orange-50 uppercase tracking-tighter"
           >
             Production
+          </button>
+
+          <button 
+            onClick={() => { onNavigate('downstream'); setMobileMenuOpen(false); }}
+            className="text-left py-6 text-2xl font-semibold text-gray-900 border-b border-orange-50 uppercase tracking-tighter pl-6 border-l-4 border-[#E83E00]"
+          >
+            Downstream
           </button>
           
           <button 
             onClick={() => { onNavigate('cmw'); setMobileMenuOpen(false); }}
-            className="text-left py-6 text-2xl font-semibold text-gray-900 border-b border-purple-50 uppercase tracking-tighter"
+            className="text-left py-6 text-2xl font-semibold text-gray-900 border-b border-orange-50 uppercase tracking-tighter"
           >
             CM&W
           </button>
 
           <button 
-            onClick={() => { onNavigate('downstream'); setMobileMenuOpen(false); }}
-            className="text-left py-6 text-2xl font-semibold text-gray-900 border-b border-purple-50 uppercase tracking-tighter pl-6 border-l-4 border-[#4B1771]"
+            onClick={scrollToContact}
+            className="text-left py-6 text-2xl font-semibold text-[#E83E00] border-b border-orange-50 uppercase tracking-tighter"
           >
-            Downstream
+            Contact Us
           </button>
 
           <div className="mt-auto pt-10 grid grid-cols-1 gap-6">
             {utilityLinks.map(link => (
-              <a key={link.label} href={link.href} className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] hover:text-[#4B1771] transition-colors">{link.label}</a>
+              <a key={link.label} href={link.href} className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] hover:text-[#E83E00] transition-colors">{link.label}</a>
             ))}
           </div>
         </div>

@@ -19,13 +19,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans selection:bg-[#4B1771]/10 selection:text-[#4B1771]">
+    <div className="min-h-screen flex flex-col font-sans selection:bg-[#E83E00]/10 selection:text-[#E83E00]">
       <Header onNavigate={navigateTo} />
       <main className="flex-grow pt-[70px] md:pt-[85px]">
         {currentPage === 'home' && <LandingPage />}
-        {currentPage === 'production' && <ProductionPage />}
-        {currentPage === 'cmw' && <CMWPage />}
-        {currentPage === 'downstream' && <DownstreamPage />}
+        {currentPage === 'production' && <ProductionPage onNavigate={navigateTo} />}
+        {currentPage === 'cmw' && <CMWPage onNavigate={navigateTo} />}
+        {currentPage === 'downstream' && <DownstreamPage onNavigate={navigateTo} />}
       </main>
       <Footer />
     </div>
