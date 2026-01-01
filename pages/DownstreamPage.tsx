@@ -27,14 +27,14 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
         
         <div className="relative container mx-auto px-8 lg:px-20 z-10">
           <div className="max-w-5xl relative pl-10 md:pl-24">
-            <div className="absolute left-0 top-0 w-1.5 md:w-2 h-32 md:h-56 bg-[#E83E00] shadow-[0_0_40px_rgba(232,62,0,0.5)]"></div>
-            <div className="absolute left-0 top-0 w-24 md:w-48 h-1.5 md:h-2 bg-[#E83E00] shadow-[0_0_40px_rgba(232,62,0,0.5)]"></div>
+            <div className="absolute left-0 top-0 w-1.5 md:w-2 h-32 md:h-56 bg-[#e37249] shadow-[0_0_40px_rgba(227,114,73,0.5)]"></div>
+            <div className="absolute left-0 top-0 w-24 md:w-48 h-1.5 md:h-2 bg-[#e37249] shadow-[0_0_40px_rgba(227,114,73,0.5)]"></div>
             
             <div className="mb-10">
-              <span className="text-[#E83E00] font-medium tracking-[0.4em] text-xs md:text-sm uppercase block mb-6">Specialty Chemicals</span>
+              <span className="text-[#e37249] font-medium tracking-[0.4em] text-xs md:text-sm uppercase block mb-6">Specialty Chemicals</span>
               <h1 className="text-5xl md:text-8xl font-semibold text-white uppercase tracking-tight leading-[1.1]">
                 Downstream <br /> 
-                <span className="text-[#E83E00]">Operations</span>
+                <span className="text-[#e37249]">Operations</span>
               </h1>
             </div>
             
@@ -44,7 +44,7 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
             
             <button 
               onClick={scrollToContact}
-              className="bg-[#E83E00] text-white px-12 py-6 font-semibold text-xs tracking-[0.3em] uppercase hover:bg-white hover:text-[#E83E00] transition-all shadow-[0_20px_60px_rgba(0,0,0,0.4)] flex items-center gap-4"
+              className="bg-[#e37249] text-white px-12 py-6 font-semibold text-xs tracking-[0.3em] uppercase hover:bg-white hover:text-[#e37249] transition-all shadow-[0_20px_60px_rgba(227,114,73,0.4)] flex items-center gap-4"
             >
               TALK TO AN EXPERT <ChevronRight size={18} />
             </button>
@@ -57,13 +57,13 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-8 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-32 items-center">
             <div className="relative group">
-               <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#E83E00]/10 rounded-full z-0 group-hover:scale-125 transition-transform duration-1000"></div>
+               <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#e37249]/10 rounded-full z-0 group-hover:scale-125 transition-transform duration-1000"></div>
                <img 
                  src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecb?q=80&w=1200&auto=format&fit=crop" 
                  alt="Laboratory Analysis" 
                  className="relative z-10 rounded-2xl shadow-3xl border-8 border-white"
                />
-               <div className="absolute -bottom-8 -left-8 bg-[#E83E00] text-white p-10 z-20 shadow-2xl rounded-sm">
+               <div className="absolute -bottom-8 -left-8 bg-[#e37249] text-white p-10 z-20 shadow-2xl rounded-sm">
                  <Microscope size={40} className="mb-4" />
                  <p className="text-xl font-semibold uppercase tracking-tight leading-none">Process <br /> Intelligence</p>
                </div>
@@ -71,9 +71,9 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
 
             <div>
               <h2 className="text-4xl md:text-6xl font-semibold text-slate-900 mb-10 tracking-tight uppercase leading-[1.1]">
-                Expert Analysis of <br /> <span className="text-[#E83E00]">Process Streams</span>
+                Expert Analysis of <br /> <span className="text-[#e37249]">Process Streams</span>
               </h2>
-              <div className="w-20 h-2 bg-[#E83E00] mb-10"></div>
+              <div className="w-20 h-2 bg-[#e37249] mb-10"></div>
               <p className="text-slate-600 text-lg md:text-xl font-normal leading-relaxed mb-8">
                 To help refiners, petrochemical plants and heavy industrial operators meet performance and cost objectives, Petrolchem provides customized water treatment, process treatment, and finished fuel additive solutions.
               </p>
@@ -88,9 +88,9 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
                   "Ammonia and fertilizer industrial treatment overview",
                   "Petrochemical process treatment solutions catalog"
                 ].map((item, i) => (
-                  <button key={i} onClick={scrollToContact} className="w-full text-left flex items-center gap-4 group p-5 border border-gray-100 hover:border-[#E83E00] transition-all hover:bg-orange-50/30">
-                    <Download size={20} className="text-[#E83E00]" />
-                    <span className="text-sm font-semibold text-slate-700 group-hover:text-[#E83E00] uppercase tracking-wide">{item}</span>
+                  <button key={i} onClick={scrollToContact} className="w-full text-left flex items-center gap-4 group p-5 border border-gray-100 hover:border-[#e37249] transition-all hover:bg-orange-50/30">
+                    <Download size={20} className="text-[#e37249]" />
+                    <span className="text-sm font-semibold text-slate-700 group-hover:text-[#e37249] uppercase tracking-wide">{item}</span>
                   </button>
                 ))}
               </div>
@@ -103,9 +103,9 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
       <section className="py-24 md:py-40 bg-[#fffbf9]">
         <div className="container mx-auto px-8 lg:px-20">
           <div className="text-center mb-24 max-w-3xl mx-auto">
-            <span className="text-[#E83E00] font-semibold tracking-[0.5em] text-sm uppercase mb-6 block">Industrial Solutions</span>
+            <span className="text-[#e37249] font-semibold tracking-[0.5em] text-sm uppercase mb-6 block">Industrial Solutions</span>
             <h2 className="text-4xl md:text-7xl font-semibold text-slate-900 mb-8 tracking-tight uppercase leading-none">
-              Strategic <span className="text-[#E83E00]">Integrity</span>
+              Strategic <span className="text-[#e37249]">Integrity</span>
             </h2>
             <p className="text-slate-500 font-normal text-xl leading-relaxed">
               Targeted chemistries designed for the most demanding downstream environments.
@@ -113,8 +113,8 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(232,62,0,0.06)] border-b-8 border-transparent hover:border-[#E83E00] transition-all duration-500 group">
-              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#E83E00] mb-8 group-hover:bg-[#E83E00] group-hover:text-white transition-all duration-500">
+            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(227,114,73,0.06)] border-b-8 border-transparent hover:border-[#e37249] transition-all duration-500 group">
+              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#e37249] mb-8 group-hover:bg-[#e37249] group-hover:text-white transition-all duration-500">
                 <Waves size={32} />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-6 uppercase tracking-tight">Water Treatment</h3>
@@ -123,14 +123,14 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
               </p>
               <button 
                 onClick={scrollToContact}
-                className="text-[#E83E00] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
+                className="text-[#e37249] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
               >
                 EXPLORE <ChevronRight size={16} />
               </button>
             </div>
 
-            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(232,62,0,0.06)] border-b-8 border-transparent hover:border-[#E83E00] transition-all duration-500 group">
-              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#E83E00] mb-8 group-hover:bg-[#E83E00] group-hover:text-white transition-all duration-500">
+            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(227,114,73,0.06)] border-b-8 border-transparent hover:border-[#e37249] transition-all duration-500 group">
+              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#e37249] mb-8 group-hover:bg-[#e37249] group-hover:text-white transition-all duration-500">
                 <Beaker size={32} />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-6 uppercase tracking-tight">Process Treatment</h3>
@@ -139,14 +139,14 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
               </p>
               <button 
                 onClick={scrollToContact}
-                className="text-[#E83E00] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
+                className="text-[#e37249] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
               >
                 EXPLORE <ChevronRight size={16} />
               </button>
             </div>
 
-            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(232,62,0,0.06)] border-b-8 border-transparent hover:border-[#E83E00] transition-all duration-500 group">
-              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#E83E00] mb-8 group-hover:bg-[#E83E00] group-hover:text-white transition-all duration-500">
+            <div className="bg-white p-12 shadow-[0_30px_80px_rgba(227,114,73,0.06)] border-b-8 border-transparent hover:border-[#e37249] transition-all duration-500 group">
+              <div className="w-16 h-16 bg-orange-50 flex items-center justify-center text-[#e37249] mb-8 group-hover:bg-[#e37249] group-hover:text-white transition-all duration-500">
                 <Fuel size={32} />
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-6 uppercase tracking-tight">Fuel Additives</h3>
@@ -155,7 +155,7 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
               </p>
               <button 
                 onClick={scrollToContact}
-                className="text-[#E83E00] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
+                className="text-[#e37249] font-semibold text-xs tracking-[0.3em] flex items-center gap-2 hover:gap-4 transition-all"
               >
                 EXPLORE <ChevronRight size={16} />
               </button>
@@ -165,11 +165,11 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
       </section>
 
       <section className="py-24 md:py-36 bg-[#1b0a05] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E83E00]/10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#e37249]/10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
         <div className="container mx-auto px-8 lg:px-20 text-center relative z-10">
-          <div className="w-20 h-1.5 bg-[#E83E00] mx-auto mb-10 shadow-[0_0_20px_rgba(232,62,0,0.5)]"></div>
+          <div className="w-20 h-1.5 bg-[#e37249] mx-auto mb-10 shadow-[0_0_20px_rgba(227,114,73,0.5)]"></div>
           <h2 className="text-4xl md:text-6xl font-semibold text-white mb-10 tracking-tight uppercase leading-none">
-            Ready to <span className="text-[#E83E00]">Take the Next Step?</span>
+            Ready to <span className="text-[#e37249]">Take the Next Step?</span>
           </h2>
           <p className="text-orange-100/70 text-xl md:text-2xl font-normal mb-14 max-w-3xl mx-auto leading-relaxed">
             Discuss your downstream optimization strategy with a Petrolchem expert and unlock immediate operational value.
@@ -177,7 +177,7 @@ const DownstreamPage: React.FC<DownstreamPageProps> = ({ onNavigate }) => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <button 
               onClick={scrollToContact}
-              className="bg-[#E83E00] text-white px-16 py-6 font-semibold text-sm tracking-[0.4em] uppercase hover:bg-white hover:text-[#E83E00] transition-all shadow-3xl w-full md:w-auto"
+              className="bg-[#e37249] text-white px-16 py-6 font-semibold text-sm tracking-[0.4em] uppercase hover:bg-white hover:text-[#e37249] transition-all shadow-3xl w-full md:w-auto"
             >
               GET IN TOUCH
             </button>

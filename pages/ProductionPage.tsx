@@ -25,10 +25,10 @@ const ProductionPage: React.FC<ProductionPageProps> = ({ onNavigate }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
         <div className="container relative z-10 mx-auto px-6 lg:px-20">
-          <div className="max-w-4xl border-l-8 border-[#E83E00] pl-8 md:pl-16">
-            <span className="text-[#E83E00] font-bold tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block">Business Segment</span>
+          <div className="max-w-4xl border-l-8 border-[#e37249] pl-8 md:pl-16">
+            <span className="text-[#e37249] font-bold tracking-[0.4em] text-xs md:text-sm uppercase mb-6 block">Business Segment</span>
             <h1 className="text-5xl md:text-9xl font-semibold text-white uppercase tracking-tighter leading-none mb-10">
-              Production <br /> <span className="text-[#E83E00]">Solutions</span>
+              Production <br /> <span className="text-[#e37249]">Solutions</span>
             </h1>
             <p className="text-xl md:text-3xl text-orange-50 font-light max-w-2xl leading-relaxed">
               Maximizing reservoir recovery and operational efficiency through integrated chemical and mechanical systems.
@@ -43,20 +43,20 @@ const ProductionPage: React.FC<ProductionPageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
             <div>
               <h2 className="text-4xl md:text-7xl font-semibold text-slate-900 mb-10 tracking-tight uppercase leading-none">
-                Optimizing the <br /> <span className="text-[#E83E00]">Lifecycle</span>
+                Optimizing the <br /> <span className="text-[#e37249]">Lifecycle</span>
               </h2>
-              <div className="w-24 h-2 bg-[#E83E00] mb-12"></div>
+              <div className="w-24 h-2 bg-[#e37249] mb-12"></div>
               <p className="text-slate-600 text-lg md:text-xl font-normal leading-relaxed mb-8">
                 Our production solutions are engineered to address the specific challenges of aging reservoirs, complex completions, and harsh environments. By deploying intelligent chemistry and autonomous mechanical systems, we ensure consistent throughput.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
-                  { icon: <Settings className="text-[#E83E00]" />, title: "Artificial Lift", desc: "Advanced ESP and gas lift optimization." },
-                  { icon: <Droplets className="text-[#E83E00]" />, title: "Fluid Management", desc: "Chemical solutions for separation and flow." },
-                  { icon: <Zap className="text-[#E83E00]" />, title: "Power Systems", desc: "On-site energy generation and efficiency." },
-                  { icon: <Shield className="text-[#E83E00]" />, title: "Asset Integrity", desc: "Corrosion and scale inhibition strategies." }
+                  { icon: <Settings className="text-[#e37249]" />, title: "Artificial Lift", desc: "Advanced ESP and gas lift optimization." },
+                  { icon: <Droplets className="text-[#e37249]" />, title: "Fluid Management", desc: "Chemical solutions for separation and flow." },
+                  { icon: <Zap className="text-[#e37249]" />, title: "Power Systems", desc: "On-site energy generation and efficiency." },
+                  { icon: <Shield className="text-[#e37249]" />, title: "Asset Integrity", desc: "Corrosion and scale inhibition strategies." }
                 ].map((item, i) => (
-                  <div key={i} className="p-8 bg-slate-50 border-b-4 border-transparent hover:border-[#E83E00] transition-all group">
+                  <div key={i} className="p-8 bg-slate-50 border-b-4 border-transparent hover:border-[#e37249] transition-all group">
                     <div className="mb-4 transform group-hover:scale-110 transition-transform">{item.icon}</div>
                     <h4 className="font-bold text-lg mb-2 uppercase tracking-tight">{item.title}</h4>
                     <p className="text-slate-500 text-sm leading-snug">{item.desc}</p>
@@ -70,7 +70,7 @@ const ProductionPage: React.FC<ProductionPageProps> = ({ onNavigate }) => {
                 className="rounded-3xl shadow-3xl"
                 alt="Production Site"
               />
-              <div className="absolute -bottom-10 -left-10 bg-[#E83E00] text-white p-12 hidden md:block">
+              <div className="absolute -bottom-10 -left-10 bg-[#e37249] text-white p-12 hidden md:block">
                 <p className="text-5xl font-black mb-2">99.8%</p>
                 <p className="text-xs tracking-widest uppercase opacity-70">Uptime Reliability</p>
               </div>
@@ -88,12 +88,12 @@ const ProductionPage: React.FC<ProductionPageProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
           {[1, 2, 3].map((i) => (
             <div key={i} className="bg-white p-10 shadow-2xl hover:-translate-y-4 transition-all duration-500 flex flex-col group">
-              <span className="text-[#E83E00] font-bold text-xs tracking-widest uppercase mb-6 block">Case Study 0{i}</span>
+              <span className="text-[#e37249] font-bold text-xs tracking-widest uppercase mb-6 block">Case Study 0{i}</span>
               <h3 className="text-2xl font-semibold mb-6 uppercase tracking-tight leading-tight">North Sea Subsea Recovery Optimization</h3>
               <p className="text-slate-500 mb-10 flex-grow">How integrated umbilical-less systems increased production by 14% in mature offshore fields.</p>
               <button 
                 onClick={scrollToContact}
-                className="flex items-center gap-3 text-[#E83E00] font-bold text-xs tracking-[0.3em] uppercase group-hover:gap-5 transition-all text-left"
+                className="flex items-center gap-3 text-[#e37249] font-bold text-xs tracking-[0.3em] uppercase group-hover:gap-5 transition-all text-left"
               >
                 READ REPORT <ChevronRight size={16} />
               </button>
@@ -110,7 +110,7 @@ const ProductionPage: React.FC<ProductionPageProps> = ({ onNavigate }) => {
               <h3 className="text-3xl font-bold uppercase tracking-tight mb-4">Technical Resources</h3>
               <p className="text-slate-500 text-lg">Download the complete Production Solutions brochure and safety specifications.</p>
             </div>
-            <button className="bg-[#E83E00] text-white px-12 py-6 font-bold text-sm tracking-widest uppercase flex items-center gap-4 hover:bg-black transition-all">
+            <button className="bg-[#e37249] text-white px-12 py-6 font-bold text-sm tracking-widest uppercase flex items-center gap-4 hover:bg-black transition-all">
               DOWNLOAD ALL <Download size={18} />
             </button>
           </div>

@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
                     <a 
                       href={link.href} 
                       onClick={link.onClick}
-                      className="hover:text-[#E83E00] transition-colors"
+                      className="hover:text-[#e37249] transition-colors"
                     >
                       {link.label}
                     </a>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                       <a 
                         href={link.href} 
                         onClick={link.onClick}
-                        className="text-sm text-gray-600 font-medium hover:text-[#E83E00]"
+                        className="text-sm text-gray-600 font-medium hover:text-[#e37249]"
                       >
                         {link.label}
                       </a>
@@ -112,22 +112,22 @@ const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8">
-            <a href="#" className="text-gray-400 hover:text-[#E83E00] transition-colors"><Linkedin size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#E83E00] transition-colors"><Youtube size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#E83E00] transition-colors"><Instagram size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#E83E00] transition-colors"><Facebook size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#E83E00] transition-colors"><Twitter size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#e37249] transition-colors"><Linkedin size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#e37249] transition-colors"><Youtube size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#e37249] transition-colors"><Instagram size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#e37249] transition-colors"><Facebook size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#e37249] transition-colors"><Twitter size={22} /></a>
           </div>
           <div className="flex gap-6 text-[12px] md:text-[10px] text-gray-500 font-medium">
             <span>© 2025 Petrolchem</span>
-            <a href="#" className="hover:text-[#E83E00]">Privacy</a>
+            <a href="#" className="hover:text-[#e37249]">Privacy</a>
             <a href="#" className="hover:text-black">Terms</a>
           </div>
         </div>
       </div>
       
       {/* Floating Accessibility Button */}
-      <div className="fixed bottom-6 left-6 bg-[#2b3138] w-10 h-10 rounded-full flex items-center justify-center text-white z-50 cursor-pointer shadow-lg hover:bg-[#E83E00] transition-colors">
+      <div className="fixed bottom-6 left-6 bg-[#2b3138] w-10 h-10 rounded-full flex items-center justify-center text-white z-50 cursor-pointer shadow-lg hover:bg-[#e37249] transition-colors">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/>
         </svg>

@@ -19,7 +19,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans selection:bg-[#E83E00]/10 selection:text-[#E83E00]">
+    <div className="min-h-screen flex flex-col font-sans selection:bg-[#e37249]/10 selection:text-[#e37249]">
       <Header onNavigate={navigateTo} />
       <main className="flex-grow pt-[70px] md:pt-[85px]">
         {currentPage === 'home' && <LandingPage />}

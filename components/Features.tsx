@@ -24,9 +24,9 @@ const featureData = [
 ];
 
 const FeatureCard: React.FC<{ data: typeof featureData[0] }> = ({ data }) => (
-  <div className="group overflow-hidden bg-white shadow-[0_30px_70px_rgba(232,62,0,0.05)] flex flex-col h-full border-t-[12px] border-transparent hover:border-[#E83E00] transition-all duration-700 rounded-lg">
+  <div className="group overflow-hidden bg-white shadow-[0_30px_70px_rgba(227,114,73,0.05)] flex flex-col h-full border-t-[12px] border-transparent hover:border-[#e37249] transition-all duration-700 rounded-lg">
     <div className="relative h-80 overflow-hidden">
-      <div className="absolute inset-0 bg-[#E83E00]/0 group-hover:bg-[#E83E00]/30 transition-all duration-700 z-10"></div>
+      <div className="absolute inset-0 bg-[#e37249]/0 group-hover:bg-[#e37249]/30 transition-all duration-700 z-10"></div>
       <img 
         src={data.img} 
         alt={data.title} 
@@ -34,16 +34,16 @@ const FeatureCard: React.FC<{ data: typeof featureData[0] }> = ({ data }) => (
       />
     </div>
     <div className="p-10 md:p-12 flex flex-col flex-grow bg-white">
-      <h3 className="text-2xl font-semibold mb-6 tracking-tight text-[#E83E00] uppercase leading-none">{data.title}</h3>
+      <h3 className="text-2xl font-semibold mb-6 tracking-tight text-[#e37249] uppercase leading-none">{data.title}</h3>
       <p className="text-slate-600 mb-10 flex-grow leading-relaxed font-normal text-[17px]">
         {data.desc}
       </p>
       <button 
         onClick={() => document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' })}
-        className="flex items-center gap-4 text-[#E83E00] font-semibold text-sm tracking-[0.3em] group/link mt-auto hover:gap-6 transition-all"
+        className="flex items-center gap-4 text-[#e37249] font-semibold text-sm tracking-[0.3em] group/link mt-auto hover:gap-6 transition-all"
       >
         {data.link.toUpperCase()}
-        <ArrowUpRight size={22} className="group-hover/link:-translate-y-2 group-hover/link:translate-x-2 transition-transform text-[#E83E00]" />
+        <ArrowUpRight size={22} className="group-hover/link:-translate-y-2 group-hover/link:translate-x-2 transition-transform text-[#e37249]" />
       </button>
     </div>
   </div>
@@ -56,16 +56,16 @@ const Features: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32 gap-12">
           <div className="max-w-4xl">
             <h2 className="text-5xl md:text-8xl font-semibold text-slate-900 mb-10 tracking-tighter uppercase leading-[0.85]">
-              ARCHITECTS OF <br className="hidden md:block" /> <span className="text-[#E83E00]">GLOBAL VELOCITY</span>
+              ARCHITECTS OF <br className="hidden md:block" /> <span className="text-[#e37249]">GLOBAL VELOCITY</span>
             </h2>
-            <div className="w-32 h-4 bg-[#E83E00] mb-10 shadow-[0_10px_25px_rgba(232,62,0,0.4)]"></div>
+            <div className="w-32 h-4 bg-[#e37249] mb-10 shadow-[0_10px_25px_rgba(227,114,73,0.4)]"></div>
             <p className="text-slate-600 font-normal text-2xl leading-relaxed max-w-2xl">
               We redefine performance through the lens of technical mastery and ecological balance.
             </p>
           </div>
           <button 
             onClick={() => document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-sm font-semibold tracking-[0.4em] text-white bg-[#E83E00] px-10 py-5 hover:bg-black transition-all shadow-xl uppercase"
+            className="text-sm font-semibold tracking-[0.4em] text-white bg-[#e37249] px-10 py-5 hover:bg-black transition-all shadow-xl uppercase"
           >
             FULL SERVICE SPECTRUM
           </button>

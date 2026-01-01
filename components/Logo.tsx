@@ -4,8 +4,8 @@ import React from 'react';
 const Logo: React.FC<{ className?: string }> = ({ className = "h-10 w-10" }) => {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <svg viewBox="0 0 100 100" className="h-full w-auto" fill="#E83E00">
-        {/* Recreating the dotted mandala style logo with brand color #E83E00 */}
+      <svg viewBox="0 0 100 100" className="h-full w-auto" fill="#e37249">
+        {/* Recreating the dotted mandala style logo with brand color #e37249 */}
         {[0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345].map((angle, i) => {
           const rad = (angle * Math.PI) / 180;
           return (
@@ -20,7 +20,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = "h-10 w-10" }) => 
           );
         })}
       </svg>
-      <span className="text-[20px] md:text-[24px] font-black text-[#E83E00] tracking-[-0.05em] leading-none uppercase">
+      <span className="text-[20px] md:text-[24px] font-black text-[#e37249] tracking-[-0.05em] leading-none uppercase">
         PETROLCHEM
       </span>
     </div>
