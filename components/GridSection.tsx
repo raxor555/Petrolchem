@@ -14,27 +14,27 @@ interface GridSectionProps {
 
 const GridSection: React.FC<GridSectionProps> = ({ title, items }) => {
   return (
-    <section className="py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="relative pl-6 mb-10">
-          <div className="absolute left-0 top-0 w-4 h-1 bg-[#BE1E2D]"></div>
-          <div className="absolute left-0 top-0 w-1 h-4 bg-[#BE1E2D]"></div>
-          <h2 className="text-[28px] md:text-3xl font-light text-gray-800 tracking-tight leading-tight">{title}</h2>
+    <section className="py-20 md:py-32 bg-white">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="relative pl-8 mb-16">
+          <div className="absolute left-0 top-0 w-6 h-2 bg-[#4B1771] shadow-[0_5px_10px_rgba(75,23,113,0.3)]"></div>
+          <div className="absolute left-0 top-0 w-2 h-6 bg-[#4B1771] shadow-[0_5px_10px_rgba(75,23,113,0.3)]"></div>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 tracking-tighter leading-tight uppercase">{title}</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 mb-20">
           {items.map((item, idx) => (
-            <div key={idx} className="flex flex-col border border-gray-100 shadow-sm group hover:shadow-md transition-shadow">
-              <div className="relative h-56 overflow-hidden">
-                <div className="absolute top-0 left-0 w-3 h-1 bg-[#BE1E2D] z-10"></div>
-                <div className="absolute top-0 left-0 w-1 h-3 bg-[#BE1E2D] z-10"></div>
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div key={idx} className="flex flex-col border border-gray-50 shadow-[0_10px_30px_rgba(0,0,0,0.02)] group hover:shadow-[0_20px_50px_rgba(75,23,113,0.1)] transition-all duration-500 rounded-sm bg-white overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
+                <div className="absolute top-0 left-0 w-5 h-1.5 bg-[#4B1771] z-10 transition-all group-hover:w-full"></div>
+                <div className="absolute top-0 left-0 w-1.5 h-5 bg-[#4B1771] z-10 transition-all"></div>
+                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 group-hover:rotate-1" />
               </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow bg-white">
-                <h3 className="text-[18px] md:text-xl font-medium text-gray-900 mb-4 leading-tight min-h-auto md:min-h-[3.5rem]">{item.title}</h3>
-                <p className="text-sm text-gray-600 font-light leading-relaxed mb-6 flex-grow">{item.desc}</p>
-                <a href="#" className="text-[#BE1E2D] text-[11px] font-bold tracking-[0.1em] uppercase flex items-center gap-1 hover:underline">
-                  EXPLORE <span className="text-[16px]">›</span>
+              <div className="p-8 md:p-10 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-5 leading-tight group-hover:text-[#4B1771] transition-colors uppercase min-h-[3.5rem]">{item.title}</h3>
+                <p className="text-sm text-gray-500 font-normal leading-relaxed mb-8 flex-grow">{item.desc}</p>
+                <a href="#" className="text-[#4B1771] text-[11px] font-semibold tracking-[0.3em] uppercase flex items-center gap-2 hover:translate-x-3 transition-transform">
+                  EXPLORE <span className="text-xl">→</span>
                 </a>
               </div>
             </div>
@@ -42,8 +42,8 @@ const GridSection: React.FC<GridSectionProps> = ({ title, items }) => {
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 w-full md:w-auto px-12 py-3 text-xs font-bold transition-colors uppercase tracking-widest">
-            See More
+          <button className="bg-gray-900 hover:bg-[#4B1771] text-white w-full md:w-auto px-16 py-5 text-[11px] font-semibold transition-all uppercase tracking-[0.4em] shadow-xl">
+            LOAD MORE INSIGHTS
           </button>
         </div>
       </div>

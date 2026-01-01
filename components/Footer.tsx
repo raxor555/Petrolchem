@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
               <h4 className="font-bold text-xs uppercase text-gray-900 mb-6">{section.title}</h4>
               <ul className="space-y-2 text-[11px] text-gray-600 font-medium">
                 {section.links.map(link => (
-                  <li key={link.label}><a href={link.href} className="hover:text-[#BE1E2D]">{link.label}</a></li>
+                  <li key={link.label}><a href={link.href} className="hover:text-[#4B1771]">{link.label}</a></li>
                 ))}
               </ul>
             </div>
@@ -88,11 +88,11 @@ const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8">
-            <a href="#" className="text-gray-400 hover:text-[#BE1E2D]"><Linkedin size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#BE1E2D]"><Youtube size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#BE1E2D]"><Instagram size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#BE1E2D]"><Facebook size={22} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#BE1E2D]"><Twitter size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#4B1771]"><Linkedin size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#4B1771]"><Youtube size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#4B1771]"><Instagram size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#4B1771]"><Facebook size={22} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#4B1771]"><Twitter size={22} /></a>
           </div>
           <div className="flex gap-6 text-[12px] md:text-[10px] text-gray-500 font-medium">
             <span>© 2025</span>

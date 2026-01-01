@@ -7,8 +7,8 @@
     <title>PETROLCHEM | The Future of Energy</title>
     <meta name="description" content="Petrolchem - Leading the energy industry through innovation, technology, and superior service.">
     
-    <!-- Favicon: Simple Red Square for Petrolchem branding -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23BE1E2D'/%3E%3C/svg%3E">
+    <!-- Favicon: Updated to match the new circular dotted logo style -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%234B1771' stroke-width='2' stroke-dasharray='4 4'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%234B1771' stroke-width='3' stroke-dasharray='6 6'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +22,13 @@
             -moz-osx-font-smoothing: grayscale;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Match Hero Background to avoid flash */
+            background-color: #000;
         }
         
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -43,10 +41,9 @@
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #BE1E2D;
+            background: #4B1771;
         }
 
-        /* Prevent potential blank screen by ensuring root has height */
         #root {
             min-height: 100vh;
             display: flex;
@@ -55,7 +52,6 @@
         }
     </style>
     
-    <!-- Explicitly including the entry point script for environments that may not auto-import it -->
     <script type="module" src="./index.tsx"></script>
 <script type="importmap">
 {
@@ -63,7 +59,7 @@
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.454.0"
   }
 }
 </script>
